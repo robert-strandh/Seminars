@@ -1,0 +1,299 @@
+\documentclass{slides}
+\usepackage[utf8]{inputenc}
+\usepackage{graphics}
+\usepackage{portland}
+\usepackage{epsfig}
+\usepackage{alltt}
+\usepackage{moreverb}
+\usepackage{url}
+\usepackage[dvips,usenames]{color}
+
+\definecolor{MyLightMagenta}{rgb}{1,0.7,1}
+\definecolor{darkgreen}{rgb}{0.1,0.7,0.1}
+
+\newcommand{\darkgreen}[1]{\textcolor{darkgreen}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\thistle}[1]{\textcolor{Thistle}{#1}}
+\newcommand{\apricot}[1]{\textcolor{Apricot}{#1}}
+\newcommand{\melon}[1]{\textcolor{Melon}{#1}}
+\newcommand{\dandelion}[1]{\textcolor{Dandelion}{#1}}
+\newcommand{\green}[1]{\textcolor{OliveGreen}{#1}}
+\newcommand{\lavender}[1]{\textcolor{Lavender}{#1}}
+\newcommand{\mylightmagenta}[1]{\textcolor{MyLightMagenta}{#1}}
+\newcommand{\blue}[1]{\textcolor{RoyalBlue}{#1}}
+\newcommand{\darkorchid}[1]{\textcolor{DarkOrchid}{#1}}
+\newcommand{\orchid}[1]{\textcolor{Orchid}{#1}}
+\newcommand{\brickred}[1]{\textcolor{BrickRed}{#1}}
+\newcommand{\peach}[1]{\textcolor{Peach}{#1}}
+\newcommand{\bittersweet}[1]{\textcolor{Bittersweet}{#1}}
+\newcommand{\salmon}[1]{\textcolor{Salmon}{#1}}
+\newcommand{\yelloworange}[1]{\textcolor{YellowOrange}{#1}}
+\newcommand{\periwinkle}[1]{\textcolor{Periwinkle}{#1}}
+
+\newcommand{\names}[1]{\periwinkle{#1}}
+\newcommand{\motcle}[1]{\mylightmagenta{#1}}
+\newcommand{\classname}[1]{\darkgreen{#1}}
+\newcommand{\str}[1]{\yelloworange{#1}}
+\newcommand{\defun}[1]{\orchid{#1}}
+\newcommand{\ti}[1]{\begin{center}\Large{\textcolor{blue}{#1}}\end{center}}
+\newcommand{\alert}[1]{\thistle{#1}}
+\newcommand{\lispprint}[1]{\dandelion{#1}}
+\newcommand{\lispvalue}[1]{\red{#1}}
+\newcommand{\tr}[1]{\texttt{\red{#1}}}
+\newcommand{\emc}[1]{\red{#1}}
+\newcommand{\lispobj}[1]{\green{\texttt{#1}}}
+\def\prompt{{\textcolor{Orchid}{CL-USER>}}}
+\newcommand{\promptp}[1]{\textcolor{Orchid}{#1>}}
+
+\newcommand{\Comment}[1]{
+\begin{center}
+\textcolor{yellow}
+{#1}
+\end{center}
+}
+
+\def\bs{$\backslash$}
+\def\inputfig#1{\input #1}
+\def\inputtex#1{\input #1}
+
+\begin{document}
+\landscape
+\setlength{\oddsidemargin}{1cm}
+\setlength{\evensidemargin}{1cm}
+\setlength{\marginparwidth}{1cm}
+\setlength{\parskip}{0.5cm}
+\setlength{\parindent}{0cm}
+%-----------------------------------------------------------
+\begin{slide}\ti{Kaizen for everyone}
+\vskip 0.5cm
+\begin{center}
+Robert Strandh \\
+LaBRI \\
+Université de Bordeaux \\
+Bordeaux, France
+\end{center}
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Simple techniques: Program existing tools}
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Example (shell alias)}
+
+How long does it take to type:
+
+\texttt{git push github master}
+
+followed by RETURN/ENTER?
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Example (shell alias) (2)}
+
+Compare to how long it takes to type:
+
+\texttt{gip}
+
+followed by RETURN/ENTER?
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Example (shell alias) (3)}
+
+At average typing speed, the first line takes around 9 seconds, and
+the second one takes less than 2 seconds.
+
+For simplicity, let's say we save 6 seconds.
+
+Suppose further that we type this line 10 times per day.
+
+This gives a total of 1 minute saved per day.
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Example (shell alias) (4)}
+
+1 minute per day is around 180 minutes per year, which is 3 hours.
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Example (editor abbrevs)}
+
+Demo
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Estimate of time gain for French email}
+
+I went through a month of archived outgoing email.
+
+The saving was several hours per month, say 20 hours per year, which
+is half a workweek.
+
+During the years I was the head of the teaching program, I saved
+roughly 4 workweeks.
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Example (abbrevs as for correcting spelling)}
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Learn to touch type}
+
+Average typing speed is around 150 keystrokes per minute.
+
+Consider the possibility of improving your typing speed by 10\%. 
+
+If you spend 1 hour per day typing, you gain 6 minutes per day.
+
+The result is half a workweek per year saved.
+
+Consider that it takes a few weeks to get up to speed.
+
+You learn faster if you move your keys around arbitrarily, or (like
+me) if the markings on your keys do not correspond to the keyboard
+layout.
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Adapt your keyboard}
+
+As an Emacs user, I use the control key a lot.  So I put it where the
+caps-lock key is normally located.  
+
+Instead of using the meta key, I use C-[.
+
+Instead of TAB, use C-i.
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Switch to a better editor}
+
+Your editor should have at least the following features:
+
+\begin{itemize}
+\item Abbrevs
+\item Dynamic abbrevs (M-/ in Emacs)
+\item Spell checker
+\item Completion
+\item Customization for keyboard shortcuts
+\item Programmable extensions
+\end{itemize}
+
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{More involved: Write some code}
+
+Demo: Learning a new (natural) language.
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Estimate of time gain for learning Vietnamese}
+
+The initial version of this application took around 2 hours to write.
+
+During a couple of years, it easily saved me 100 dictionary lookups
+per week.  
+
+Estimate that it takes 30 seconds to look up an entry in an electronic
+dictionary.
+
+That comes to 50 minutes per week, let's say 1 hour.  The total gain
+is a workweek per year.
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Other examples of writing some code}
+
+  \begin{itemize}
+  \item Balancing checking account.
+  \end{itemize}
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Learn a new programming language}
+
+Article by Paul Hudak and Mark Jones.
+
+``Haskell vs. Ada vs. C++ vs. Awk vs. ... An Experiment in Software
+Prototyping Productivity''
+
+It is somewhat old, but the main idea is still valid.
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Obstacles}
+
+  \begin{itemize}
+  \item Employer (may not approve)
+  \item No incentive (paid by the hour)
+  \item Psychological barriers
+  \end{itemize}
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Calculation}
+
+If every week, you take one single action that will save one single
+minute of time per day, then after a year, you will have a weekly gain
+of 3 hours.
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{}
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Conclusions}
+
+All the examples I have presented are conservative.  From observing
+other people work, I can see that I am twice as fast as most of them,
+just by knowing my editor and by typing faster.
+
+To that should be added all the more complicated techniques that I
+have invested in.
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Future work}
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Tomorrow's talk}
+
+My ideal operating system.
+
+\vfill\end{slide}
+%-----------------------------------------------------------
+\begin{slide}\ti{Possible future talks}
+
+  \begin{itemize}
+  \item Algorithms and data structures
+  \item Object-oriented programming with generic functions
+  \item Parsing technology
+  \item Compiler technology (optimization)
+  \item Operating-system techniques
+  \item Automatic memory-management (garbage collection) techniques
+  \item Non-automatic memory-management techniques
+  \item Computer architecture
+  \end{itemize}
+
+\vfill\end{slide}
+%% %-----------------------------------------------------------
+%% \begin{slide}\ti{}
+
+%% \vfill\end{slide}
+%% %-----------------------------------------------------------
+%% \begin{slide}\ti{}
+
+%% \vfill\end{slide}
+%% %-----------------------------------------------------------
+%% \begin{slide}\ti{}
+
+%% \vfill\end{slide}
+%--------------------------------
+
+\end{document}
+ 
