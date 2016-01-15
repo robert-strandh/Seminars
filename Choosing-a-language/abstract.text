@@ -1,0 +1,22 @@
+Title: Choosing a programming language
+
+Abstract:
+
+Frequently, the choice of a programming language for a project is
+based on insufficient analyses of the available choices, in particular
+when it comes to important characteristics of different
+possibilities.
+
+In this talk, we attempt to characterize programming languages with
+respect to several, typically orthogonal, features.  Most of these
+features are technical in nature, such as performance of generated
+code, type system, memory management, etc.  Some features discussed
+are more socially related, such as control over specifications and
+existence of qualified programmers. 
+
+Since the choice of a programming language is closely related to the
+kind of project it is meant for, to the availability of staff, etc.,
+we do not attempt to make specific recommendations.  We do, however,
+attempt to raise warnings about common choices, and conversely, to
+argue in favor of some choices that are commonly dismissed for reasons
+that may not be relevant.
