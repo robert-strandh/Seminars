@@ -1,18 +1,22 @@
-Title: Effect of language on productivity
+Title: Choosing a programming language
 
 Abstract:
 
-It is extremeley difficult to measure programmer productivity.  It is
-therefore hard to determine the influence of a particular programming
-language on this productivity.  Furthermore, a scientific study would
-be very costly in order for results to be reliable.  For that reason,
-research results in this domain are practically non-existent. 
+Frequently, the choice of a programming language for a project is
+based on insufficient analyses of the available choices, in particular
+when it comes to important characteristics of different
+possibilities.
 
-A rare exception is represented by a paper by Hudak and Jones from
-1994.  While their paper was written in an attempt to promote the
-language Haskell for rapid prototyping, we make a more general
-analysis of its contents.  Based on this analysis, we are convinced
-that the choice of a programming language for most projects is based
-on insufficient analyses, and that the consequences for the total cost
-of the project could be very significant.
+In this talk, we attempt to characterize programming languages with
+respect to several, typically orthogonal, features.  Most of these
+features are technical in nature, such as performance of generated
+code, type system, memory management, etc.  Some features discussed
+are more socially related, such as control over specifications and
+existence of qualified programmers. 
 
+Since the choice of a programming language is closely related to the
+kind of project it is meant for, to the availability of staff, etc.,
+we do not attempt to make specific recommendations.  We do, however,
+attempt to raise warnings about common choices, and conversely, to
+argue in favor of some choices that are commonly dismissed for reasons
+that may not be relevant.
