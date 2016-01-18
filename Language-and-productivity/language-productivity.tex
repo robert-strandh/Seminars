@@ -162,19 +162,19 @@ with respect to the programming language they chose for the task.
   (lambda (point) (<= (abs (realpart point)) (/ width 2))))
 
 (defun complement (zone)
-  (lambda (point) (not (funcall zone point))))
+  (lambda (point) (not (inside? point zone))))
 
 (defun union (zone1 zone2)
-  (lambda (point) (or (funcall zone1 point) (funcall zone2 point))))
+  (lambda (point) (or (inside? point zone1) (inside? point zone2))))
 
 (defun intersection (zone1 zone2)
-  (lambda (point) (and (funcall zone1 point) (funcall zone2 point))))
+  (lambda (point) (and (inside? point zone1) (inside? point zone2))))
 
 (defun translate (zone delta)
-  (lambda (point) (funcall zone (- point delta))))
+  (lambda (point) (inside? (- point delta) zone)))
 
-(defun scale (zone factor)
-  (lambda (point) (funcall zone (/ point factor))))
+(defun rotate (zone angle)
+  (lambda (point) (inside? zone (/ point (expt #c(0.0 1.0) pi)))))
 \end{verbatim}
 }
 
