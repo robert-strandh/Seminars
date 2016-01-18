@@ -148,7 +148,7 @@ with respect to the programming language they chose for the task.
 %-----------------------------------------------------------
 \begin{slide}\ti{Solution}
 
-{\small\begin{verbatim}
+{\tiny\begin{verbatim}
 (defun inside? (point zone)
   (funcall zone point))
 
@@ -169,6 +169,12 @@ with respect to the programming language they chose for the task.
 
 (defun intersection (zone1 zone2)
   (lambda (point) (and (funcall zone1 point) (funcall zone2 point))))
+
+(defun translate (zone delta)
+  (lambda (point) (funcall zone (- point delta))))
+
+(defun scale (zone factor)
+  (lambda (point) (funcall zone (/ point factor))))
 \end{verbatim}
 }
 
