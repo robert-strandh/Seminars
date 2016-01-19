@@ -269,6 +269,12 @@ objects that are no longer referenced.
 Common misconception: manual memory management is faster than
 automatic memory management.
 
+With manual memory management, for modularity, it is often necessary
+to copy objects or to use reference counters.
+
+Such techniques can easily incur a performance penalty of a factor
+10--100 on modern hardware.  Why?
+
 \vfill\end{slide}
 %-----------------------------------------------------------
 \begin{slide}\ti{Compiled/static vs interpreted/dynamic}
