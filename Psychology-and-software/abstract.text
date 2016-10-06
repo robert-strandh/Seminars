@@ -1,0 +1,17 @@
+Title: Psychology and software development
+
+Abstract:
+
+A number of well known psychological phenomena may have considerable
+impact on software development, in that they influence the way
+software developers work, and how important strategic decisions are
+made.  Often, this impact decreases developer productivity
+considerably, and it results in sub-optimal strategic decisions with
+significantly increased development cost as a direct consequence.
+
+In this talk, we discuss a variety of such psychological phenomena and
+ways in which they may have a negative effect on several aspects of
+the software development process such as cost and productivity.  We
+also discuss concrete techniques that allow a development team to
+compensate for these phenomena so that these negative effects are
+minimized. 
