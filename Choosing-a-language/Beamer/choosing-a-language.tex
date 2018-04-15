@@ -107,7 +107,7 @@ University of Bordeaux
 
 The choice of programming language for a project (when there are
 several possibilities) is often based on \emph{gut feeling}.
-
+\vskip 0.5cm
 Often, no real analysis is made, because the decision maker:
 
 \begin{itemize}
@@ -145,7 +145,7 @@ Often, no real analysis is made, because the decision maker:
 
 Language: A description of the syntax and semantics of conforming
 programs, and of consequences of using non-conforming constructs.
-
+\vskip 0.5cm
 Example of the latter: In C, obtaining a pointer outside of an array
 has undefined consequences.  (It is interesting to contemplate why.)
 
@@ -156,6 +156,207 @@ has undefined consequences.  (It is interesting to contemplate why.)
 Implementation: Software that accepts conforming programs and executes
 them according to the language semantics, and that reports
 non-conforming constructs where required by the language definition.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Language vs implementation}
+
+In many cases, the language definition does not require the compiler
+to check for non-conforming constructs.  Why?
+\vskip 0.5cm
+As a consequence, many non-conforming programs go undetected.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Language vs implementation}
+
+The distinction language/implementation is sometimes blurred:
+
+\begin{itemize}
+\item Some languages are defined by a \emph{reference
+  implementation}.  Examples?
+\item Some language definitions are controlled by the same
+  organization that supplies some dominating implementation.
+  Examples?
+\end{itemize}
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Language characteristics}
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Strong vs weak typing}
+
+A language can be \emph{strongly typed} or \emph{weakly typed}, and
+even \emph{untyped}.
+\vskip 0.5cm
+Strongly typed: It is impossible for an object of one type to be
+mistaken for an object of a different type.  Either the compiler made
+sure no mistake is possible, or the run-time system checked it.
+\vskip 0.5cm
+Weakly typed: No such guarantees are made.
+\vskip 0.5cm
+Untyped: Data can be interpreted differently by different operations.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Static vs dynamic typing}
+
+A language can be \emph{statically typed} or \emph{dynamically
+  typed}.
+\vskip 0.5cm
+Static typing: Type information is associated with the
+\emph{variables} in the program.  Type checking or type inference is
+always handled at compile time.
+\vskip 0.5cm
+Dynamic typing: Type information is associated with the \emph{objects}
+manipulated by the program.  Type checking must sometimes be done at
+execution time.  Not always?
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Manifest vs implicit typing}
+
+A statically typed programming language may be based on \emph{manifest
+  typing} or \emph{implicit typing}.
+\vskip 0.5cm
+Manifest typing: The programmers supplies the type of the variables
+explicitly.
+\vskip 0.5cm
+Implicit typing (sometimes called \emph{latent} typing): The compiler
+\emph{infers} the type of the variables from the operations it
+participates in.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Manifest vs implicit typing}
+
+Why is the distinction between manifest and implicit typing important?
+\vskip 0.5cm
+With manifest typing, the programmer is given too much responsibility
+too early in the development process.  Choices made may easily change
+later on.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Manifest vs implicit typing}
+
+Some dynamically typed programming languages allow optional type
+declarations.
+\vskip 0.5cm
+Such declarations are sometimes used in order to allow the compiler to
+generate faster code.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Static vs dynamic}
+
+A programming language can be either \emph{static} or \emph{dynamic}.
+\vskip 0.5cm
+Static: There is a clear distinction between \emph{compile time} and
+\emph{run time}.  Code is \emph{generated} at compile time and
+\emph{executed} at run time.
+\vskip 0.5cm
+Dynamic: There is no clear distinction between \emph{compile time} and
+\emph{run time}.  The program might change as a result of executing
+code (for example, executing a statement that defines a function or a
+class).
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Interpreted vs compiled}
+
+Can you guess what an \emph{interpreted programming language} is and
+what a \emph{compiled programming language} might be?
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Interpreted vs compiled}
+
+Can you guess what an \emph{interpreted programming language} is and
+what a \emph{compiled programming language} might be?
+\vskip 0.5cm
+A programming \emph{language} is neither interpreted nor compiled.  A
+programming language \emph{implementation} is either one or both (it
+is a spectrum of possibilities).
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Interpreted vs compiled}
+
+The distinction is important because it affects the \emph{execution
+  performance} of the program.
+\vskip 0.5cm
+An implementation that compiles to native code has the potential of
+generating \emph{fast} code.
+\vskip 0.5cm
+An implementation that has more elements of interpretation can
+generate code that is slower by a factor 10 or more compared to code
+generated by a native compiler.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Manual vs automatic memory management}
+
+Manual memory management: The language requires the programmer to
+de-allocate objects that are no longer going to be referenced.
+\vskip 0.5cm
+Automatic memory management: The implementation of the language is
+required to automatically recycle objects that are no longer
+referenced.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Standardization}
+
+A language is said to have an \emph{independent standard} if and only
+if the definition of the language is published by an organization
+other than a supplier of an implementation.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Scripting languages}
+
+There are few properties that characterize scripting languages.
+Probably only:
+
+\begin{itemize}
+\item The creators meant for the language to be used for scripting.
+\item It is a dynamic language.
+\end{itemize}
+
+Common scripting languages are single-implementation languages with
+the implementation written as a slow interpreter.  This technique is
+considered acceptable because of the first item above.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Scripting languages}
+
+Typically, a static language is used for the main body of code, and a
+``scripting language'' for, um, scripting.
+\vskip 0.5cm
+When the advanced user starts writing serious code using the scripting
+language (because that's the only choice possible), the combined
+result is slow despite the best intentions of the creators.
+\vskip 0.5cm
+Furthermore, debugging code written in two languages is typically hard.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Domain-specific languages}
+
+A domain-specific language is a language that was designed for a
+particular family of programming tasks.
+\vskip 0.5cm
+Often, the language is defined by the same organization that then uses
+it.
+\vskip 0.5cm
+The productivity advantage can be huge.
+\vskip 0.5cm
+Designing and implementing a domain-specific language requires
+expertise in language design and compiler technology.
 
 \end{frame}
 %-----------------------------------------------------------
