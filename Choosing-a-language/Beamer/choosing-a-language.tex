@@ -360,11 +360,223 @@ expertise in language design and compiler technology.
 
 \end{frame}
 %-----------------------------------------------------------
+\begin{frame}\frametitle{Common misconceptions}
 
-\begin{frame}
-\frametitle{Thank you}
-
-Questions?
 \end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Manual vs automatic memory management}
 
+Common misconception: manual memory management is faster than
+automatic memory management.
+\vskip 0.5cm
+With manual memory management, for modularity, it is often necessary
+to copy objects or to use reference counters.
+\vskip 0.5cm
+Such techniques can easily incur a performance penalty of a factor
+10--100 on modern hardware.  Why?
+\vskip 0.5cm
+Modern garbage collectors are fast, concurrent, multi-threaded, and
+some have real-time or near-real-time guarantees.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Compiled/static vs interpreted/dynamic}
+
+Common misconception: dynamic languages must be interpreted.
+\vskip 0.5cm
+Conversely: only static languages can be compiled.
+\vskip 0.5cm
+Modern implementations of dynamic languages generate native code
+\emph{on the fly}.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Alternatives to scripting languages}
+
+Use the same dynamic language for the main body of code and for
+scripting purposes.
+\vskip 0.5cm
+Choose a language that has an efficient implementation that compiles
+to native code.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{So how do we choose a language?}
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{So how do we choose a language?}
+
+Making a good language choice requires:
+
+\begin{itemize}
+\item Good knowledge of the characteristics of several programming
+  languages (the subject of this talk).
+\item Good knowledge of the nature of the task to be accomplished.
+\item A separate and detailed budget for each ``reasonable'' language
+  choice.
+\end{itemize}
+
+We will look at the last item a bit more.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{How not to choose}
+
+  \begin{itemize}
+  \item ``We need all the speed we can get, and it is known that the
+    C++ compiler generates very fast code.  Therefore we choose C++.''
+  \item ``All our programmers already know Java.  Therefore we choose
+    Java.''
+  \item ``We have made a huge investment in programming tools for
+    C\#.  Therefore we choose C\#.''
+  \end{itemize}
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{What to include in the budgets}
+
+  \begin{itemize}
+  \item Cost of acquisition of language tools.
+  \item Estimated development and maintenance cost.
+  \item Cost of training and hiring new staff.
+  \item ...
+  \item Risk analysis.
+  \end{itemize}
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Risk analysis}
+
+For every major possible choice (tools, staff, development method,
+etc.), make a list of possible events that might have a negative
+impact on the project.
+\vskip 0.5cm
+For each event, state:
+
+\begin{itemize}
+\item its likelihood,
+\item the cost to the project if nothing is done,
+\item actions to avoid the negative impact, and
+\item the cost of those actions.
+\end{itemize}
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Risk analysis}
+
+Example:
+\vskip 0.5cm
+Choice: Make Joe a member of the staff.  Joe is a reckless driver.
+\vskip 0.5cm
+Event: Joe has a traffic accident and can no longer work on the
+project.
+\vskip 0.5cm
+Likelihood: Unlikely
+\vskip 0.5cm
+Cost if nothing is done: The project will be delayed by six months.
+\vskip 0.5cm
+Action: Hire a replacement for Joe.
+\vskip 0.5cm
+Cost of action: Salary, training, etc.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Risk analysis}
+
+Example:
+\vskip 0.5cm
+Choice: Use the language C\#.
+\vskip 0.5cm
+Event: Microsoft is bought by Apple (or Google) and C\# is no longer
+supported.
+\vskip 0.5cm
+Likelihood: Unlikely
+\vskip 0.5cm
+Cost if nothing is done: All code must be rewritten in Java.
+\vskip 0.5cm
+Action: Obtain (buy, develop) a replacement for Microsoft C\#.
+\vskip 0.5cm
+Cost of action: Cost of purchase or development.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Standardization and risk analysis}
+
+If a language does not have an independent standard, its specification
+may change as a result of the organization that supplies the
+implementation.
+\vskip 0.5cm
+The cost to a project could be huge.  Much code may need to be
+rewritten, perhaps not immediately, but over time.
+\vskip 0.5cm
+Such possibilities must be taken into account in the risk analysis.
+\vskip 0.5cm
+Examples?
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Availability of good implementations}
+
+A good implementation may exist when a project is started, but might
+then be abandoned over time.
+\vskip 0.5cm
+Again, the cost to a project could be huge, including a complete
+rewrite using a different language.
+\vskip 0.5cm
+Such possibilities must be taken into account in the risk analysis.
+\vskip 0.5cm
+Examples?
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Availability of programmers}
+
+New graduates may only know a few languages.
+\vskip 0.5cm
+They may also have the wrong idea of languages they do not (yet) know
+and sometimes also about the languages they (think they) know.
+\vskip 0.5cm
+For other languages, it may be necessary to train existing programmers
+or to hire new programmers.
+\vskip 0.5cm
+The salary may need to be higher.  That will be another factor in the
+cost analysis of the project.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Availability of programmers}
+
+For a medium-sized or large company, it is advisable to have
+programmers with knowledge of several different programming languages
+using different programming paradigms.
+\vskip 0.5cm
+That way, a large spectrum of languages can be covered.
+\vskip 0.5cm
+Programmers can participate in decisions about programming languages,
+and they can help train other programmers.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Conclusions}
+
+Choosing the right language for a task can have a great impact on the
+amount of work it takes to finish that task.
+\vskip 0.5cm
+Making the right choice requires expertise that must either be
+developed in-house, or hired when a new project is starting.
+\vskip 0.5cm
+It is best to do a detailed cost/benefit analysis, including a risk
+analysis, for each reasonable choice of a language.
+
+\end{frame}
+%-----------------------------------------------------------
+\begin{frame}\frametitle{Questions?}
+
+Thank you for listening!
+\vskip 0.5cm
+Do you have any questions?
+
+\end{frame}
+%-----------------------------------------------------------
 \end{document}
